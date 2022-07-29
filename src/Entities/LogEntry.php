@@ -309,7 +309,7 @@ class LogEntry implements Arrayable, Jsonable, JsonSerializable
         }
 
         // EXTRACT CONTEXT (Regex from https://stackoverflow.com/a/21995025)
-        preg_match_all('/{(?:[^{}]|(?R))*}/x', $header, $out);
+        preg_match_all('/{(?:[^{}]*|(?R))*}/x', $header, $out);
         if (isset($out[0][0]) && ! is_null($context = json_decode($out[0][0], true))) {
             $header = str_replace($out[0][0], '', $header);
             $this->setContext($context);

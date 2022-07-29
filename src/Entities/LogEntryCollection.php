@@ -32,6 +32,10 @@ class LogEntryCollection extends LazyCollection
         return new static(function () use ($raw) {
             foreach (LogParser::parse($raw) as $entry) {
                 list($level, $header, $stack) = array_values($entry);
+                if ($stack != "\n") {
+                    $header .= "\"}";
+                    $stack = substr($stack,0, -5);
+                }
 
                 yield new LogEntry($level, $header, $stack);
             }
