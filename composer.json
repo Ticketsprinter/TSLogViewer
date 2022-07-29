@@ -1,8 +1,8 @@
 {
-    "name":        "arcanedev/log-viewer",
+    "name":        "ticketsprinter/ts-log-viewer",
     "description": "Provides a Log Viewer for Laravel",
     "keywords":    ["arcanedev", "arcanesoft", "laravel", "log", "log viewer", "log-viewer", "logviewer"],
-    "homepage":    "https://github.com/ARCANEDEV/LogViewer",
+    "homepage":    "https://github.com/Ticketsprinter/TSLogViewer",
     "authors": [
         {
             "name":     "ARCANEDEV",
