@@ -27,13 +27,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Arcanedev\\LogViewer\\": "src/"
+            "Ticketsprinter\\TSLogViewer\\": "src/"
         },
         "files": ["helpers.php"]
     },
     "autoload-dev": {
         "psr-4": {
-            "Arcanedev\\LogViewer\\Tests\\": "tests/"
+            "Ticketsprinter\\TSLogViewer\\Tests\\": "tests/"
         }
     },
     "scripts": {
@@ -47,8 +47,8 @@
         },
         "laravel": {
             "providers": [
-                "Arcanedev\\LogViewer\\LogViewerServiceProvider",
-                "Arcanedev\\LogViewer\\Providers\\DeferredServicesProvider"
+                "Ticketsprinter\\TSLogViewer\\LogViewerServiceProvider",
+                "Ticketsprinter\\TSLogViewer\\Providers\\DeferredServicesProvider"
             ]
         }
     },
