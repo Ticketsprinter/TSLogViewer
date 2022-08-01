@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Arcanedev\LogViewer\Helpers;
+namespace Ticketsprinter\TSLogViewer\Helpers;
 
-use Arcanedev\LogViewer\Utilities\LogLevels;
+use Ticketsprinter\TSLogViewer\Utilities\LogLevels;
 use Illuminate\Support\Str;
 
 /**

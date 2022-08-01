@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Arcanedev\LogViewer\Entities;
+namespace Ticketsprinter\TSLogViewer\Entities;
 
 use Illuminate\Contracts\Support\{Arrayable, Jsonable};
 use Illuminate\Support\Carbon;

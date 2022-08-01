@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Arcanedev\LogViewer\Commands;
+namespace Ticketsprinter\TSLogViewer\Commands;
 
 /**
  * Class     ClearCommand

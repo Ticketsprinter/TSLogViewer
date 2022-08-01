@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Arcanedev\LogViewer\Tables;
+namespace Ticketsprinter\TSLogViewer\Tables;
 
-use Arcanedev\LogViewer\Contracts\Table as TableContract;
-use Arcanedev\LogViewer\Contracts\Utilities\LogLevels as LogLevelsContract;
+use Ticketsprinter\TSLogViewer\Contracts\Table as TableContract;
+use Ticketsprinter\TSLogViewer\Contracts\Utilities\LogLevels as LogLevelsContract;
 
 /**
  * Class     AbstractTable

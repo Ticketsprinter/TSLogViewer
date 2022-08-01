@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Arcanedev\LogViewer\Contracts\Utilities;
+namespace Ticketsprinter\TSLogViewer\Contracts\Utilities;
 
-use Arcanedev\LogViewer\Entities\Log;
+use Ticketsprinter\TSLogViewer\Entities\Log;
 use Illuminate\Contracts\Config\Repository as ConfigContract;
 
 /**

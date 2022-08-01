@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Arcanedev\LogViewer\Exceptions;
+namespace Ticketsprinter\TSLogViewer\Exceptions;
 
 /**
  * Class     FilesystemException

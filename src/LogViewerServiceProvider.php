@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Arcanedev\LogViewer;
+namespace Ticketsprinter\TSLogViewer;
 
 use Arcanedev\Support\Providers\PackageServiceProvider;
 

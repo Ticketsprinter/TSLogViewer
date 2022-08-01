@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Arcanedev\LogViewer\Tests\Entities;
+namespace Ticketsprinter\TSLogViewer\Tests\Entities;
 
-use Arcanedev\LogViewer\Entities\LogCollection;
-use Arcanedev\LogViewer\Exceptions\LogNotFoundException;
-use Arcanedev\LogViewer\Tests\TestCase;
+use Ticketsprinter\TSLogViewer\Entities\LogCollection;
+use Ticketsprinter\TSLogViewer\Exceptions\LogNotFoundException;
+use Ticketsprinter\TSLogViewer\Tests\TestCase;
 
 /**
  * Class     LogCollectionTest
@@ -20,7 +20,7 @@ class LogCollectionTest extends TestCase
      | -----------------------------------------------------------------
      */
 
-    /** @var  \Arcanedev\LogViewer\Entities\LogCollection */
+    /** @var  \Ticketsprinter\TSLogViewer\Entities\LogCollection */
     private $logs;
 
     /* -----------------------------------------------------------------
@@ -61,7 +61,7 @@ class LogCollectionTest extends TestCase
         static::assertSame(16, $this->logs->total());
 
         foreach ($this->logs as $date => $log) {
-            /** @var  \Arcanedev\LogViewer\Entities\Log  $log */
+            /** @var  \Ticketsprinter\TSLogViewer\Entities\Log  $log */
             static::assertLog($log, $date);
             static::assertCount(8,  $log->entries());
             static::assertSame(8, $log->entries()->count());

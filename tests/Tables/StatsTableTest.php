@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Arcanedev\LogViewer\Tests\Tables;
+namespace Ticketsprinter\TSLogViewer\Tests\Tables;
 
-use Arcanedev\LogViewer\Contracts\Table as TableContract;
-use Arcanedev\LogViewer\Tables\StatsTable;
-use Arcanedev\LogViewer\Tests\TestCase;
+use Ticketsprinter\TSLogViewer\Contracts\Table as TableContract;
+use Ticketsprinter\TSLogViewer\Tables\StatsTable;
+use Ticketsprinter\TSLogViewer\Tests\TestCase;
 
 /**
  * Class     StatsTableTest
@@ -20,7 +20,7 @@ class StatsTableTest extends TestCase
      | -----------------------------------------------------------------
      */
 
-    /** @var  \Arcanedev\LogViewer\Tables\StatsTable */
+    /** @var  \Ticketsprinter\TSLogViewer\Tables\StatsTable */
     private $table;
 
     /** @var array */
@@ -116,8 +116,8 @@ class StatsTableTest extends TestCase
     /** @test */
     public function it_can_get_stats_table_via_log_viewer(): void
     {
-        /** @var  \Arcanedev\LogViewer\Contracts\LogViewer  $logViewer */
-        $logViewer = $this->app->make(\Arcanedev\LogViewer\Contracts\LogViewer::class);
+        /** @var  \Ticketsprinter\TSLogViewer\Contracts\LogViewer  $logViewer */
+        $logViewer = $this->app->make(\Ticketsprinter\TSLogViewer\Contracts\LogViewer::class);
 
         static::assertTable($logViewer->statsTable());
     }
@@ -125,8 +125,8 @@ class StatsTableTest extends TestCase
     /** @test */
     public function it_can_get_stats_table_via_log_factory(): void
     {
-        /** @var  \Arcanedev\LogViewer\Contracts\Utilities\Factory  $logFactory */
-        $logFactory = $this->app->make(\Arcanedev\LogViewer\Contracts\Utilities\Factory::class);
+        /** @var  \Ticketsprinter\TSLogViewer\Contracts\Utilities\Factory  $logFactory */
+        $logFactory = $this->app->make(\Ticketsprinter\TSLogViewer\Contracts\Utilities\Factory::class);
 
         static::assertTable($logFactory->statsTable());
     }
@@ -139,7 +139,7 @@ class StatsTableTest extends TestCase
     /**
      * Assert table instance.
      *
-     * @param  \Arcanedev\LogViewer\Contracts\Table  $table
+     * @param  \Ticketsprinter\TSLogViewer\Contracts\Table  $table
      */
     protected static function assertTable(TableContract $table): void
     {
@@ -151,7 +151,7 @@ class StatsTableTest extends TestCase
     /**
      * Assert table header.
      *
-     * @param  \Arcanedev\LogViewer\Contracts\Table  $table
+     * @param  \Ticketsprinter\TSLogViewer\Contracts\Table  $table
      */
     protected static function assertTableHeader(TableContract $table): void
     {
@@ -164,7 +164,7 @@ class StatsTableTest extends TestCase
     /**
      * Assert table rows.
      *
-     * @param  \Arcanedev\LogViewer\Contracts\Table  $table
+     * @param  \Ticketsprinter\TSLogViewer\Contracts\Table  $table
      */
     protected static function assertTableRows(TableContract $table): void
     {
@@ -193,7 +193,7 @@ class StatsTableTest extends TestCase
     /**
      * Assert table footer.
      *
-     * @param  \Arcanedev\LogViewer\Contracts\Table  $table
+     * @param  \Ticketsprinter\TSLogViewer\Contracts\Table  $table
      */
     protected static function assertTableFooter(TableContract $table): void
     {
@@ -210,20 +210,20 @@ class StatsTableTest extends TestCase
     /**
      * Get the LogViewer instance.
      *
-     * @return \Arcanedev\LogViewer\Contracts\LogViewer
+     * @return \Ticketsprinter\TSLogViewer\Contracts\LogViewer
      */
     protected function getLogViewerInstance()
     {
-        return $this->app->make(\Arcanedev\LogViewer\Contracts\LogViewer::class);
+        return $this->app->make(\Ticketsprinter\TSLogViewer\Contracts\LogViewer::class);
     }
 
     /**
      * Get the LogLevels instance.
      *
-     * @return \Arcanedev\LogViewer\Contracts\Utilities\LogLevels
+     * @return \Ticketsprinter\TSLogViewer\Contracts\Utilities\LogLevels
      */
     protected function getLogLevelsInstance()
     {
-        return $this->app->make(\Arcanedev\LogViewer\Contracts\Utilities\LogLevels::class);
+        return $this->app->make(\Ticketsprinter\TSLogViewer\Contracts\Utilities\LogLevels::class);
     }
 }

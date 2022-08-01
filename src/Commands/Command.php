@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Arcanedev\LogViewer\Commands;
+namespace Ticketsprinter\TSLogViewer\Commands;
 
-use Arcanedev\LogViewer\Contracts\LogViewer as LogViewerContract;
+use Ticketsprinter\TSLogViewer\Contracts\LogViewer as LogViewerContract;
 use Arcanedev\Support\Console\Command as BaseCommand;
 
 /**

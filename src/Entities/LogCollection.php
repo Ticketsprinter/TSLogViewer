@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Arcanedev\LogViewer\Entities;
+namespace Ticketsprinter\TSLogViewer\Entities;
 
-use Arcanedev\LogViewer\Contracts\Utilities\Filesystem as FilesystemContract;
-use Arcanedev\LogViewer\Exceptions\LogNotFoundException;
+use Ticketsprinter\TSLogViewer\Contracts\Utilities\Filesystem as FilesystemContract;
+use Ticketsprinter\TSLogViewer\Exceptions\LogNotFoundException;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\LazyCollection;
 

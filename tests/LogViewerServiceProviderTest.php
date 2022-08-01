@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Arcanedev\LogViewer\Tests;
+namespace Ticketsprinter\TSLogViewer\Tests;
 
-use Arcanedev\LogViewer\LogViewerServiceProvider;
+use Ticketsprinter\TSLogViewer\LogViewerServiceProvider;
 
 /**
  * Class     LogViewerServiceProviderTest

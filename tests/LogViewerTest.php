@@ -2,12 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Arcanedev\LogViewer\Tests;
+namespace Ticketsprinter\TSLogViewer\Tests;
 
-use Arcanedev\LogViewer\Contracts\LogViewer as LogViewerContract;
-use Arcanedev\LogViewer\LogViewer;
-use Illuminate\Pagination\LengthAwarePaginator;
-use Illuminate\Support\Facades\File;
+use Ticketsprinter\TSLogViewer\Entities\Log;
+use Ticketsprinter\TSLogViewer\LogViewer;
 
 /**
  * Class     LogViewerTest
@@ -21,7 +19,8 @@ class LogViewerTest extends TestCase
      | -----------------------------------------------------------------
      */
 
-    private LogViewerContract $logViewer;
+    /** @var  \Ticketsprinter\TSLogViewer\LogViewer */
+    private $logViewer;
 
     /* -----------------------------------------------------------------
      |  Main Methods
@@ -32,7 +31,7 @@ class LogViewerTest extends TestCase
     {
         parent::setUp();
 
-        $this->logViewer = $this->app->make(LogViewerContract::class);
+        $this->logViewer = $this->app->make(\Ticketsprinter\TSLogViewer\Contracts\LogViewer::class);
     }
 
     protected function tearDown(): void
@@ -88,6 +87,7 @@ class LogViewerTest extends TestCase
         static::assertSame(2, $logs->count());
 
         foreach ($logs as $log) {
+            /** @var Log $log */
             $entries = $log->entries();
 
             static::assertDate($log->date);
@@ -102,7 +102,7 @@ class LogViewerTest extends TestCase
     {
         $logs = $this->logViewer->paginate();
 
-        static::assertInstanceOf(LengthAwarePaginator::class, $logs);
+        static::assertInstanceOf(\Illuminate\Pagination\LengthAwarePaginator::class, $logs);
         static::assertSame(30, $logs->perPage());
         static::assertSame(2, $logs->total());
         static::assertSame(1, $logs->lastPage());
@@ -136,11 +136,7 @@ class LogViewerTest extends TestCase
     /** @test */
     public function it_can_delete_a_log_file(): void
     {
-        $path = storage_path('logs-to-clear');
-
-        $this->setupLogViewerPath($path);
-
-        static::createDummyLog($date = date('Y-m-d'), $path);
+        static::createDummyLog($date = date('Y-m-d'));
 
         // Assert log exists
         $entries = $this->logViewer->get($date);
@@ -316,9 +312,7 @@ class LogViewerTest extends TestCase
     /** @test */
     public function it_can_set_custom_storage_path(): void
     {
-        $this->setupLogViewerPath(
-            static::fixturePath('custom-path-logs')
-        );
+        $this->logViewer->setPath(storage_path('custom-path-logs'));
 
         $dates = $this->logViewer->dates();
 

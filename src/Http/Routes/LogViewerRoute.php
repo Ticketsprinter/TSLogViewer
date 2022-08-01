@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Arcanedev\LogViewer\Http\Routes;
+namespace Ticketsprinter\TSLogViewer\Http\Routes;
 
-use Arcanedev\LogViewer\Http\Controllers\LogViewerController;
+use Ticketsprinter\TSLogViewer\Http\Controllers\LogViewerController;
 use Arcanedev\Support\Routing\RouteRegistrar;
 
 /**

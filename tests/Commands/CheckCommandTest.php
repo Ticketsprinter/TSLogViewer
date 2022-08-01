@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Arcanedev\LogViewer\Tests\Commands;
+namespace Ticketsprinter\TSLogViewer\Tests\Commands;
 
-use Arcanedev\LogViewer\Tests\TestCase;
+use Ticketsprinter\TSLogViewer\Tests\TestCase;
 
 /**
  * Class     CheckCommandTest

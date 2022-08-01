@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Arcanedev\LogViewer\Tests\Entities;
+namespace Ticketsprinter\TSLogViewer\Tests\Entities;
 
-use Arcanedev\LogViewer\Entities\LogEntry;
-use Arcanedev\LogViewer\Tests\TestCase;
+use Ticketsprinter\TSLogViewer\Entities\LogEntry;
+use Ticketsprinter\TSLogViewer\Tests\TestCase;
 
 /**
  * Class     LogEntryTest
@@ -19,7 +19,7 @@ class LogEntryTest extends TestCase
      | -----------------------------------------------------------------
      */
 
-    /** @var  \Arcanedev\LogViewer\Entities\LogEntry */
+    /** @var  \Ticketsprinter\TSLogViewer\Entities\LogEntry */
     private $entry;
 
     /* -----------------------------------------------------------------

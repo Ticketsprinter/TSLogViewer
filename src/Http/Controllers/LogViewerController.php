@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Arcanedev\LogViewer\Http\Controllers;
+namespace Ticketsprinter\TSLogViewer\Http\Controllers;
 
-use Arcanedev\LogViewer\Contracts\LogViewer as LogViewerContract;
-use Arcanedev\LogViewer\Entities\{LogEntry, LogEntryCollection};
-use Arcanedev\LogViewer\Exceptions\LogNotFoundException;
-use Arcanedev\LogViewer\Tables\StatsTable;
+use Ticketsprinter\TSLogViewer\Contracts\LogViewer as LogViewerContract;
+use Ticketsprinter\TSLogViewer\Entities\{LogEntry, LogEntryCollection};
+use Ticketsprinter\TSLogViewer\Exceptions\LogNotFoundException;
+use Ticketsprinter\TSLogViewer\Tables\StatsTable;
 use Illuminate\Http\Request;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Routing\Controller;

@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Arcanedev\LogViewer\Tests\Utilities;
+namespace Ticketsprinter\TSLogViewer\Tests\Utilities;
 
-use Arcanedev\LogViewer\Utilities\LogLevels;
-use Arcanedev\LogViewer\Tests\TestCase;
+use Ticketsprinter\TSLogViewer\Utilities\LogLevels;
+use Ticketsprinter\TSLogViewer\Tests\TestCase;
 
 /**
  * Class     LogLevelsTest
@@ -19,7 +19,7 @@ class LogLevelsTest extends TestCase
      | -----------------------------------------------------------------
      */
 
-    /** @var  \Arcanedev\LogViewer\Utilities\LogLevels  */
+    /** @var  \Ticketsprinter\TSLogViewer\Utilities\LogLevels  */
     private $levels;
 
     /* -----------------------------------------------------------------
@@ -31,7 +31,7 @@ class LogLevelsTest extends TestCase
     {
         parent::setUp();
 
-        $this->levels = $this->app->make(\Arcanedev\LogViewer\Contracts\Utilities\LogLevels::class);
+        $this->levels = $this->app->make(\Ticketsprinter\TSLogViewer\Contracts\Utilities\LogLevels::class);
     }
 
     public function tearDown(): void

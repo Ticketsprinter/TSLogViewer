@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Arcanedev\LogViewer\Providers;
+namespace Ticketsprinter\TSLogViewer\Providers;
 
-use Arcanedev\LogViewer\Contracts\LogViewer as LogViewerContract;
-use Arcanedev\LogViewer\Contracts\Utilities\Factory as FactoryContract;
-use Arcanedev\LogViewer\Contracts\Utilities\Filesystem as FilesystemContract;
-use Arcanedev\LogViewer\Contracts\Utilities\LogChecker as LogCheckerContract;
-use Arcanedev\LogViewer\Contracts\Utilities\LogLevels as LogLevelsContract;
-use Arcanedev\LogViewer\Contracts\Utilities\LogMenu as LogMenuContract;
-use Arcanedev\LogViewer\Contracts\Utilities\LogStyler as LogStylerContract;
-use Arcanedev\LogViewer\LogViewer;
-use Arcanedev\LogViewer\Utilities;
+use Ticketsprinter\TSLogViewer\Contracts\LogViewer as LogViewerContract;
+use Ticketsprinter\TSLogViewer\Contracts\Utilities\Factory as FactoryContract;
+use Ticketsprinter\TSLogViewer\Contracts\Utilities\Filesystem as FilesystemContract;
+use Ticketsprinter\TSLogViewer\Contracts\Utilities\LogChecker as LogCheckerContract;
+use Ticketsprinter\TSLogViewer\Contracts\Utilities\LogLevels as LogLevelsContract;
+use Ticketsprinter\TSLogViewer\Contracts\Utilities\LogMenu as LogMenuContract;
+use Ticketsprinter\TSLogViewer\Contracts\Utilities\LogStyler as LogStylerContract;
+use Ticketsprinter\TSLogViewer\LogViewer;
+use Ticketsprinter\TSLogViewer\Utilities;
 use Arcanedev\Support\Providers\ServiceProvider;
 use Illuminate\Contracts\Support\DeferrableProvider;
 

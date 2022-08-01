@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Arcanedev\LogViewer\Entities;
+namespace Ticketsprinter\TSLogViewer\Entities;
 
-use Arcanedev\LogViewer\Helpers\LogParser;
+use Ticketsprinter\TSLogViewer\Helpers\LogParser;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\LazyCollection;
 
@@ -32,6 +32,10 @@ class LogEntryCollection extends LazyCollection
         return new static(function () use ($raw) {
             foreach (LogParser::parse($raw) as $entry) {
                 list($level, $header, $stack) = array_values($entry);
+                if ($stack != "\n") {
+                    $header .= "\"}";
+                    $stack = substr($stack,0, -5);
+                }
 
                 yield new LogEntry($level, $header, $stack);
             }

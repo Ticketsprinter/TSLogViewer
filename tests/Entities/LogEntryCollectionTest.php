@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Arcanedev\LogViewer\Tests\Entities;
+namespace Ticketsprinter\TSLogViewer\Tests\Entities;
 
-use Arcanedev\LogViewer\Entities\LogEntryCollection;
-use Arcanedev\LogViewer\Tests\TestCase;
+use Ticketsprinter\TSLogViewer\Entities\LogEntryCollection;
+use Ticketsprinter\TSLogViewer\Tests\TestCase;
 
 /**
  * Class     LogEntryCollectionTest
@@ -19,7 +19,7 @@ class LogEntryCollectionTest extends TestCase
      | -----------------------------------------------------------------
      */
 
-    /** @var  \Arcanedev\LogViewer\Entities\LogEntryCollection */
+    /** @var  \Ticketsprinter\TSLogViewer\Entities\LogEntryCollection */
     private $entries;
 
     /* -----------------------------------------------------------------
@@ -124,7 +124,7 @@ class LogEntryCollectionTest extends TestCase
      *
      * @param  string  $date
      *
-     * @return \Arcanedev\LogViewer\Entities\LogEntryCollection
+     * @return \Ticketsprinter\TSLogViewer\Entities\LogEntryCollection
      */
     private function getEntries($date)
     {

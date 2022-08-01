@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Arcanedev\LogViewer\Entities;
+namespace Ticketsprinter\TSLogViewer\Entities;
 
-use Arcanedev\LogViewer\Helpers\LogParser;
+use Ticketsprinter\TSLogViewer\Helpers\LogParser;
 use Carbon\Carbon;
 use Illuminate\Contracts\Support\{Arrayable, Jsonable};
 use JsonSerializable;
@@ -305,7 +305,7 @@ class LogEntry implements Arrayable, Jsonable, JsonSerializable
         }
 
         // EXTRACT CONTEXT (Regex from https://stackoverflow.com/a/21995025)
-        preg_match_all('/{(?:[^{}]|(?R))*}/x', $header, $out);
+        preg_match_all('/{(?:[^{}]*|(?R))*}/x', $header, $out);
         if (isset($out[0][0]) && ! is_null($context = json_decode($out[0][0], true))) {
             $header = str_replace($out[0][0], '', $header);
             $this->setContext($context);

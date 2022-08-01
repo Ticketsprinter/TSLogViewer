@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Arcanedev\LogViewer\Tests\Utilities;
+namespace Ticketsprinter\TSLogViewer\Tests\Utilities;
 
-use Arcanedev\LogViewer\Tests\TestCase;
-use Arcanedev\LogViewer\Utilities\Filesystem;
+use Ticketsprinter\TSLogViewer\Tests\TestCase;
+use Ticketsprinter\TSLogViewer\Utilities\Filesystem;
 
 /**
  * Class     FilesystemTest
@@ -19,7 +19,7 @@ class FilesystemTest extends TestCase
      | -----------------------------------------------------------------
      */
 
-    /** @var  \Arcanedev\LogViewer\Utilities\Filesystem */
+    /** @var  \Ticketsprinter\TSLogViewer\Utilities\Filesystem */
     private $filesystem;
 
     /* -----------------------------------------------------------------
@@ -181,7 +181,7 @@ class FilesystemTest extends TestCase
     /** @test */
     public function it_must_throw_a_filesystem_exception_on_read(): void
     {
-        $this->expectException(\Arcanedev\LogViewer\Exceptions\FilesystemException::class);
+        $this->expectException(\Ticketsprinter\TSLogViewer\Exceptions\FilesystemException::class);
 
         $this->filesystem->read('2222-11-11'); // Future FTW
     }
@@ -189,7 +189,7 @@ class FilesystemTest extends TestCase
     /** @test */
     public function it_must_throw_a_filesystem_exception_on_delete(): void
     {
-        $this->expectException(\Arcanedev\LogViewer\Exceptions\FilesystemException::class);
+        $this->expectException(\Ticketsprinter\TSLogViewer\Exceptions\FilesystemException::class);
 
         $this->filesystem->delete('2222-11-11'); // Future FTW
     }
