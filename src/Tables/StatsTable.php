@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Arcanedev\LogViewer\Tables;
+namespace Ticketsprinter\TSLogViewer\Tables;
 
-use Arcanedev\LogViewer\Contracts\Utilities\LogLevels as LogLevelsContract;
+use Ticketsprinter\TSLogViewer\Contracts\Utilities\LogLevels as LogLevelsContract;
 use Illuminate\Support\{Arr, Collection};
 
 /**

@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Arcanedev\LogViewer\Tests\Utilities;
+namespace Ticketsprinter\TSLogViewer\Tests\Utilities;
 
-use Arcanedev\LogViewer\Tests\TestCase;
-use Arcanedev\LogViewer\Utilities\Factory;
+use Ticketsprinter\TSLogViewer\Tests\TestCase;
+use Ticketsprinter\TSLogViewer\Utilities\Factory;
 
 /**
  * Class     FactoryTest
@@ -19,7 +19,7 @@ class FactoryTest extends TestCase
      | -----------------------------------------------------------------
      */
 
-    /** @var  \Arcanedev\LogViewer\Contracts\Utilities\Factory */
+    /** @var  \Ticketsprinter\TSLogViewer\Contracts\Utilities\Factory */
     private $logFactory;
 
     /* -----------------------------------------------------------------
@@ -31,7 +31,7 @@ class FactoryTest extends TestCase
     {
         parent::setUp();
 
-        $this->logFactory = $this->app->make(\Arcanedev\LogViewer\Contracts\Utilities\Factory::class);
+        $this->logFactory = $this->app->make(\Ticketsprinter\TSLogViewer\Contracts\Utilities\Factory::class);
     }
 
     protected function tearDown(): void
@@ -56,8 +56,8 @@ class FactoryTest extends TestCase
     public function it_can_get_filesystem_object(): void
     {
         $expectations = [
-            \Arcanedev\LogViewer\Contracts\Utilities\Filesystem::class,
-            \Arcanedev\LogViewer\Utilities\Filesystem::class,
+            \Ticketsprinter\TSLogViewer\Contracts\Utilities\Filesystem::class,
+            \Ticketsprinter\TSLogViewer\Utilities\Filesystem::class,
         ];
 
         foreach ($expectations as $expected) {
@@ -69,8 +69,8 @@ class FactoryTest extends TestCase
     public function it_can_get_levels_object(): void
     {
         $expectations = [
-            \Arcanedev\LogViewer\Contracts\Utilities\LogLevels::class,
-            \Arcanedev\LogViewer\Utilities\LogLevels::class,
+            \Ticketsprinter\TSLogViewer\Contracts\Utilities\LogLevels::class,
+            \Ticketsprinter\TSLogViewer\Utilities\LogLevels::class,
         ];
 
         foreach ($expectations as $expected) {
@@ -102,7 +102,7 @@ class FactoryTest extends TestCase
     {
         $logs = $this->logFactory->all();
 
-        static::assertInstanceOf(\Arcanedev\LogViewer\Entities\LogCollection::class, $logs);
+        static::assertInstanceOf(\Ticketsprinter\TSLogViewer\Entities\LogCollection::class, $logs);
         static::assertCount(2, $logs);
         static::assertSame(2, $logs->count());
     }
@@ -231,7 +231,7 @@ class FactoryTest extends TestCase
     /** @test */
     public function it_must_throw_a_filesystem_exception(): void
     {
-        $this->expectException(\Arcanedev\LogViewer\Exceptions\LogNotFoundException::class);
+        $this->expectException(\Ticketsprinter\TSLogViewer\Exceptions\LogNotFoundException::class);
 
         $this->logFactory->get('2222-11-11'); // Future FTW
     }

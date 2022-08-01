@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Arcanedev\LogViewer\Commands;
+namespace Ticketsprinter\TSLogViewer\Commands;
 
-use Arcanedev\LogViewer\Tables\StatsTable;
+use Ticketsprinter\TSLogViewer\Tables\StatsTable;
 
 /**
  * Class     StatsCommand

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Arcanedev\LogViewer\Contracts\Utilities;
+namespace Ticketsprinter\TSLogViewer\Contracts\Utilities;
 
-use Arcanedev\LogViewer\Contracts\Patternable;
+use Ticketsprinter\TSLogViewer\Contracts\Patternable;
 
 /**
  * Interface  Filesystem

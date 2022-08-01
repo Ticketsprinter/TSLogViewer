@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Arcanedev\LogViewer\Tests\Utilities;
+namespace Ticketsprinter\TSLogViewer\Tests\Utilities;
 
-use Arcanedev\LogViewer\Tests\TestCase;
-use Arcanedev\LogViewer\Utilities\LogMenu;
+use Ticketsprinter\TSLogViewer\Tests\TestCase;
+use Ticketsprinter\TSLogViewer\Utilities\LogMenu;
 
 /**
  * Class     LogMenuTest
@@ -19,7 +19,7 @@ class LogMenuTest extends TestCase
      | -----------------------------------------------------------------
      */
 
-    /** @var  \Arcanedev\LogViewer\Utilities\LogMenu */
+    /** @var  \Ticketsprinter\TSLogViewer\Utilities\LogMenu */
     private $menu;
 
     /* -----------------------------------------------------------------
@@ -31,7 +31,7 @@ class LogMenuTest extends TestCase
     {
         parent::setUp();
 
-        $this->menu = $this->app->make(\Arcanedev\LogViewer\Contracts\Utilities\LogMenu::class);
+        $this->menu = $this->app->make(\Ticketsprinter\TSLogViewer\Contracts\Utilities\LogMenu::class);
     }
 
     protected function tearDown(): void

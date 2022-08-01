@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Arcanedev\LogViewer\Tests;
+namespace Ticketsprinter\TSLogViewer\Tests;
 
 /**
  * Class     RoutesTest
@@ -232,7 +232,7 @@ class RoutesTest extends TestCase
     {
         $response = $this->delete(route('log-viewer::logs.delete'), ['date' => '0000-00-00'], ['HTTP_X-Requested-With' => 'XMLHttpRequest']);
 
-        static::assertInstanceOf(\Arcanedev\LogViewer\Exceptions\FilesystemException::class, $response->exception);
+        static::assertInstanceOf(\Ticketsprinter\TSLogViewer\Exceptions\FilesystemException::class, $response->exception);
         static::assertStringStartsWith('The log(s) could not be located at : ', $response->exception->getMessage());
     }
 

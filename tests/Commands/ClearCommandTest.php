@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Arcanedev\LogViewer\Tests\Commands;
+namespace Ticketsprinter\TSLogViewer\Tests\Commands;
 
-use Arcanedev\LogViewer\Tests\TestCase;
+use Ticketsprinter\TSLogViewer\Tests\TestCase;
 
 /**
  * Class     ClearCommandTest
@@ -18,7 +18,7 @@ class ClearCommandTest extends TestCase
      | -----------------------------------------------------------------
      */
 
-    /** @var  \Arcanedev\LogViewer\LogViewer */
+    /** @var  \Ticketsprinter\TSLogViewer\LogViewer */
     private $logViewer;
 
     /** @var  string */
@@ -33,7 +33,7 @@ class ClearCommandTest extends TestCase
     {
         parent::setUp();
 
-        $this->logViewer = $this->app->make(\Arcanedev\LogViewer\Contracts\LogViewer::class);
+        $this->logViewer = $this->app->make(\Ticketsprinter\TSLogViewer\Contracts\LogViewer::class);
         $this->path      = storage_path('logs-to-clear');
 
         $this->setupForTests();

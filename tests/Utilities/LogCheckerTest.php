@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Arcanedev\LogViewer\Tests\Utilities;
+namespace Ticketsprinter\TSLogViewer\Tests\Utilities;
 
-use Arcanedev\LogViewer\Tests\TestCase;
-use Arcanedev\LogViewer\Utilities\LogChecker;
+use Ticketsprinter\TSLogViewer\Tests\TestCase;
+use Ticketsprinter\TSLogViewer\Utilities\LogChecker;
 
 /**
  * Class     LogCheckerTest
@@ -19,7 +19,7 @@ class LogCheckerTest extends TestCase
      | -----------------------------------------------------------------
      */
 
-    /** @var  \Arcanedev\LogViewer\Utilities\LogChecker */
+    /** @var  \Ticketsprinter\TSLogViewer\Utilities\LogChecker */
     private $checker;
 
     /* -----------------------------------------------------------------
@@ -31,7 +31,7 @@ class LogCheckerTest extends TestCase
     {
         parent::setUp();
 
-        $this->checker = $this->app->make(\Arcanedev\LogViewer\Contracts\Utilities\LogChecker::class);
+        $this->checker = $this->app->make(\Ticketsprinter\TSLogViewer\Contracts\Utilities\LogChecker::class);
     }
 
     protected function tearDown(): void

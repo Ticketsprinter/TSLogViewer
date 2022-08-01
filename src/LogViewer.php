@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Arcanedev\LogViewer;
+namespace Ticketsprinter\TSLogViewer;
 
-use Arcanedev\LogViewer\Contracts\Utilities\Filesystem as FilesystemContract;
-use Arcanedev\LogViewer\Contracts\Utilities\Factory as FactoryContract;
-use Arcanedev\LogViewer\Contracts\Utilities\LogLevels as LogLevelsContract;
-use Arcanedev\LogViewer\Contracts\LogViewer as LogViewerContract;
+use Ticketsprinter\TSLogViewer\Contracts\Utilities\Filesystem as FilesystemContract;
+use Ticketsprinter\TSLogViewer\Contracts\Utilities\Factory as FactoryContract;
+use Ticketsprinter\TSLogViewer\Contracts\Utilities\LogLevels as LogLevelsContract;
+use Ticketsprinter\TSLogViewer\Contracts\LogViewer as LogViewerContract;
 
 /**
  * Class     LogViewer

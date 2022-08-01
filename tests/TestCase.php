@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Arcanedev\LogViewer\Tests;
+namespace Ticketsprinter\TSLogViewer\Tests;
 
-use Arcanedev\LogViewer\Contracts\Utilities\Filesystem;
-use Arcanedev\LogViewer\Entities\Log;
-use Arcanedev\LogViewer\Entities\LogEntry;
-use Arcanedev\LogViewer\Entities\LogEntryCollection;
-use Arcanedev\LogViewer\Helpers\LogParser;
-use Arcanedev\LogViewer\LogViewerServiceProvider;
-use Arcanedev\LogViewer\Providers\DeferredServicesProvider;
+use Ticketsprinter\TSLogViewer\Contracts\Utilities\Filesystem;
+use Ticketsprinter\TSLogViewer\Entities\Log;
+use Ticketsprinter\TSLogViewer\Entities\LogEntry;
+use Ticketsprinter\TSLogViewer\Entities\LogEntryCollection;
+use Ticketsprinter\TSLogViewer\Helpers\LogParser;
+use Ticketsprinter\TSLogViewer\LogViewerServiceProvider;
+use Ticketsprinter\TSLogViewer\Providers\DeferredServicesProvider;
 use Carbon\Carbon;
 use Illuminate\Contracts\Support\Jsonable;
 use Illuminate\Support\Arr;
@@ -112,7 +112,7 @@ abstract class TestCase extends BaseTestCase
     /**
      * Assert Log object.
      *
-     * @param  \Arcanedev\LogViewer\Entities\Log  $log
+     * @param  \Ticketsprinter\TSLogViewer\Entities\Log  $log
      * @param  string                             $date
      */
     protected static function assertLog(Log $log, $date): void
@@ -125,7 +125,7 @@ abstract class TestCase extends BaseTestCase
      * Assert Log entries object.
      *
      * @param  string                                            $date
-     * @param  \Arcanedev\LogViewer\Entities\LogEntryCollection  $entries
+     * @param  \Ticketsprinter\TSLogViewer\Entities\LogEntryCollection  $entries
      */
     protected static function assertLogEntries($date, LogEntryCollection $entries): void
     {
@@ -138,7 +138,7 @@ abstract class TestCase extends BaseTestCase
      * Assert log entry object.
      *
      * @param  string                                  $date
-     * @param  \Arcanedev\LogViewer\Entities\LogEntry  $entry
+     * @param  \Ticketsprinter\TSLogViewer\Entities\LogEntry  $entry
      */
     protected static function assertLogEntry($date, LogEntry $entry): void
     {
@@ -298,7 +298,7 @@ abstract class TestCase extends BaseTestCase
     /**
      * Get Filesystem Utility instance.
      *
-     * @return \Arcanedev\LogViewer\Utilities\Filesystem
+     * @return \Ticketsprinter\TSLogViewer\Utilities\Filesystem
      */
     protected function filesystem()
     {
@@ -364,7 +364,7 @@ abstract class TestCase extends BaseTestCase
      *
      * @param  string  $date
      *
-     * @return \Arcanedev\LogViewer\Entities\Log
+     * @return \Ticketsprinter\TSLogViewer\Entities\Log
      */
     protected function getLog($date)
     {

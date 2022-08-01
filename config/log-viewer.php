@@ -1,6 +1,6 @@
 <?php
 
-use Arcanedev\LogViewer\Contracts\Utilities\Filesystem;
+use Ticketsprinter\TSLogViewer\Contracts\Utilities\Filesystem;
 
 return [
 

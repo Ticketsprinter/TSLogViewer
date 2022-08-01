@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Arcanedev\LogViewer\Utilities;
+namespace Ticketsprinter\TSLogViewer\Utilities;
 
-use Arcanedev\LogViewer\Contracts\Utilities\Filesystem as FilesystemContract;
-use Arcanedev\LogViewer\Contracts\Utilities\LogChecker as LogCheckerContract;
+use Ticketsprinter\TSLogViewer\Contracts\Utilities\Filesystem as FilesystemContract;
+use Ticketsprinter\TSLogViewer\Contracts\Utilities\LogChecker as LogCheckerContract;
 use Illuminate\Contracts\Config\Repository as ConfigContract;
 
 /**
@@ -30,7 +30,7 @@ class LogChecker implements LogCheckerContract
     /**
      * The filesystem instance.
      *
-     * @var \Arcanedev\LogViewer\Contracts\Utilities\Filesystem
+     * @var \Ticketsprinter\TSLogViewer\Contracts\Utilities\Filesystem
      */
     private $filesystem;
 
@@ -71,7 +71,7 @@ class LogChecker implements LogCheckerContract
      * LogChecker constructor.
      *
      * @param  \Illuminate\Contracts\Config\Repository              $config
-     * @param  \Arcanedev\LogViewer\Contracts\Utilities\Filesystem  $filesystem
+     * @param  \Ticketsprinter\TSLogViewer\Contracts\Utilities\Filesystem  $filesystem
      */
     public function __construct(ConfigContract $config, FilesystemContract $filesystem)
     {
@@ -102,7 +102,7 @@ class LogChecker implements LogCheckerContract
     /**
      * Set the Filesystem instance.
      *
-     * @param  \Arcanedev\LogViewer\Contracts\Utilities\Filesystem  $filesystem
+     * @param  \Ticketsprinter\TSLogViewer\Contracts\Utilities\Filesystem  $filesystem
      *
      * @return self
      */
@@ -221,7 +221,7 @@ class LogChecker implements LogCheckerContract
     /**
      * Refresh the checks.
      *
-     * @return \Arcanedev\LogViewer\Utilities\LogChecker
+     * @return \Ticketsprinter\TSLogViewer\Utilities\LogChecker
      */
     private function refresh()
     {

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Arcanedev\LogViewer\Utilities;
+namespace Ticketsprinter\TSLogViewer\Utilities;
 
-use Arcanedev\LogViewer\Contracts\Utilities\LogStyler as LogStylerContract;
+use Ticketsprinter\TSLogViewer\Contracts\Utilities\LogStyler as LogStylerContract;
 use Illuminate\Contracts\Config\Repository as ConfigContract;
 use Illuminate\Support\HtmlString;
 

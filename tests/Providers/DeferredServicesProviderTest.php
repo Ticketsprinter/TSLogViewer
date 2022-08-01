@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Arcanedev\LogViewer\Tests\Providers;
+namespace Ticketsprinter\TSLogViewer\Tests\Providers;
 
-use Arcanedev\LogViewer\Contracts;
-use Arcanedev\LogViewer\Providers\DeferredServicesProvider;
-use Arcanedev\LogViewer\Tests\TestCase;
+use Ticketsprinter\TSLogViewer\Contracts;
+use Ticketsprinter\TSLogViewer\Providers\DeferredServicesProvider;
+use Ticketsprinter\TSLogViewer\Tests\TestCase;
 
 /**
  * Class     DeferredServicesProviderTest
@@ -20,7 +20,7 @@ class DeferredServicesProviderTest extends TestCase
      | -----------------------------------------------------------------
      */
 
-    /** @var  \Arcanedev\LogViewer\Providers\DeferredServicesProvider */
+    /** @var  \Ticketsprinter\TSLogViewer\Providers\DeferredServicesProvider */
     private $provider;
 
     /* -----------------------------------------------------------------

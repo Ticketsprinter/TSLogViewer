@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Arcanedev\LogViewer\Entities;
+namespace Ticketsprinter\TSLogViewer\Entities;
 
-use Arcanedev\LogViewer\Helpers\LogParser;
+use Ticketsprinter\TSLogViewer\Helpers\LogParser;
 use Carbon\Carbon;
 use Illuminate\Contracts\Support\{Arrayable, Jsonable};
 use JsonSerializable;

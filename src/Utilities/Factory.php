@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Arcanedev\LogViewer\Utilities;
+namespace Ticketsprinter\TSLogViewer\Utilities;
 
-use Arcanedev\LogViewer\Contracts\Utilities\Factory as FactoryContract;
-use Arcanedev\LogViewer\Contracts\Utilities\Filesystem as FilesystemContract;
-use Arcanedev\LogViewer\Contracts\Utilities\LogLevels as LogLevelsContract;
-use Arcanedev\LogViewer\Entities\LogCollection;
-use Arcanedev\LogViewer\Entities\Log;
-use Arcanedev\LogViewer\Exceptions\LogNotFoundException;
-use Arcanedev\LogViewer\Tables\StatsTable;
+use Ticketsprinter\TSLogViewer\Contracts\Utilities\Factory as FactoryContract;
+use Ticketsprinter\TSLogViewer\Contracts\Utilities\Filesystem as FilesystemContract;
+use Ticketsprinter\TSLogViewer\Contracts\Utilities\LogLevels as LogLevelsContract;
+use Ticketsprinter\TSLogViewer\Entities\LogCollection;
+use Ticketsprinter\TSLogViewer\Entities\Log;
+use Ticketsprinter\TSLogViewer\Exceptions\LogNotFoundException;
+use Ticketsprinter\TSLogViewer\Tables\StatsTable;
 
 /**
  * Class     Factory

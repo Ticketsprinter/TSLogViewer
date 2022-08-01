@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Arcanedev\LogViewer\Commands;
+namespace Ticketsprinter\TSLogViewer\Commands;
 
-use Arcanedev\LogViewer\Contracts\Utilities\LogChecker as LogCheckerContract;
+use Ticketsprinter\TSLogViewer\Contracts\Utilities\LogChecker as LogCheckerContract;
 
 /**
  * Class     CheckCommand

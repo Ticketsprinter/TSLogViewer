@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Arcanedev\LogViewer\Tests\Utilities;
+namespace Ticketsprinter\TSLogViewer\Tests\Utilities;
 
-use Arcanedev\LogViewer\Tests\TestCase;
-use Arcanedev\LogViewer\Utilities\LogStyler;
+use Ticketsprinter\TSLogViewer\Tests\TestCase;
+use Ticketsprinter\TSLogViewer\Utilities\LogStyler;
 use Illuminate\Support\HtmlString;
 
 /**
@@ -20,7 +20,7 @@ class LogStylerTest extends TestCase
      | -----------------------------------------------------------------
      */
 
-    /** @var  \Arcanedev\LogViewer\Utilities\LogStyler */
+    /** @var  \Ticketsprinter\TSLogViewer\Utilities\LogStyler */
     private $styler;
 
     /* -----------------------------------------------------------------
@@ -32,7 +32,7 @@ class LogStylerTest extends TestCase
     {
         parent::setUp();
 
-        $this->styler = $this->app->make(\Arcanedev\LogViewer\Contracts\Utilities\LogStyler::class);
+        $this->styler = $this->app->make(\Ticketsprinter\TSLogViewer\Contracts\Utilities\LogStyler::class);
     }
 
     protected function tearDown(): void
